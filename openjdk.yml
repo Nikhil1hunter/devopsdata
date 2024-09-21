@@ -2,17 +2,13 @@
 - hosts: all
   become: yes
   tasks:
-    - name: Update apt package index
-      apt:
-        update_cache: yes
-
     - name: Install openjdk-8 on ubuntu
       apt:
         name: openjdk-8-jre
         state: present
       when: ansible_os_family == "Debian"
 
-     - name: Install openjdk-8 on redhat
+    - name: Install openjdk-8 on redhat
       yum:
         name: java-1.8.0-openjdk
         state: present
