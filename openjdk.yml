@@ -4,12 +4,12 @@
   tasks:
     - name: Install openjdk-8 on ubuntu
       apt:
-        name: openjdk-8-jre
+        name: "{{ubuntujavapckg}}"
         state: present
       when: ansible_os_family == "Debian"
 
     - name: Install openjdk-8 on redhat
       yum:
-        name: java-1.8.0-openjdk
+        name: "{{redhatjavapckg}}"
         state: present
       when: ansible_os_family == "RedHat"
