@@ -1,0 +1,45 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+    - name: Install tree package
+      apt:
+        name: tree
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install git
+      apt:
+        name: git
+        state: present
+      when: ansible_os_family == "Debian"
+
+
+    - name: Install wget
+      apt:
+        name: wget
+        state: present
+      when: ansible_os_family == "Debian"
+
+     - name: Install tree package
+      apt:
+        name: tree
+        state: present
+      when: ansible_os_family == "Redhat"
+
+    - name: Install git
+      apt:
+        name: git
+        state: present
+      when: ansible_os_family == "RedHat"
+
+
+    - name: Install wget
+      apt:
+        name: wget
+        state: present
+      when: ansible_os_family == "RedHat"
+
+
+
