@@ -23,20 +23,20 @@
       when: ansible_os_family == "Debian"
 
      - name: Install tree package
-      apt:
+      yum:
         name: tree
         state: present
       when: ansible_os_family == "Redhat"
 
     - name: Install git
-      apt:
+      yum:
         name: git
         state: present
       when: ansible_os_family == "RedHat"
 
 
     - name: Install wget
-      apt:
+      yum:
         name: wget
         state: present
       when: ansible_os_family == "RedHat"
