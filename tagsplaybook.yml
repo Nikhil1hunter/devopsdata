@@ -7,34 +7,40 @@
       apt:
         name: tree
         state: present
+      tags: mytree  
       when: ansible_os_family == "Debian"
 
     - name: Install git
       apt:
         name: git
         state: present
+      tags: mygit  
       when: ansible_os_family == "Debian"
 
     - name: Install wget
       apt:
         name: wget
         state: present
+      tags: mywget  
       when: ansible_os_family == "Debian"
 
     - name: Install tree
       yum:
         name: tree
         state: present
+      tags: mytree
       when: ansible_os_family == "RedHat"
 
     - name: Install git
       yum:
         name: git
         state: present
+      tags: mygit
       when: ansible_os_family == "RedHat"
 
     - name: Install wget
       yum:
         name: wget
         state: present
+      tags: mywget  
       when: ansible_os_family == "RedHat"
