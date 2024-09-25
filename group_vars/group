@@ -1,0 +1,3 @@
+---
+ubuntujavapckg : openjdk-8-jre
+redhatjavapckg : java-1.8.0-openjdk
