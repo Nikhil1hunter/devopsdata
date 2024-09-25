@@ -3,7 +3,7 @@
   become: yes
   tasks:
 
-    - name: Install tree package
+    - name: Install tree
       apt:
         name: tree
         state: present
@@ -15,18 +15,17 @@
         state: present
       when: ansible_os_family == "Debian"
 
-
     - name: Install wget
       apt:
         name: wget
         state: present
       when: ansible_os_family == "Debian"
 
-     - name: Install tree package
+    - name: Install tree
       yum:
         name: tree
         state: present
-      when: ansible_os_family == "Redhat"
+      when: ansible_os_family == "RedHat"
 
     - name: Install git
       yum:
@@ -34,12 +33,8 @@
         state: present
       when: ansible_os_family == "RedHat"
 
-
     - name: Install wget
       yum:
         name: wget
         state: present
       when: ansible_os_family == "RedHat"
-
-
-
