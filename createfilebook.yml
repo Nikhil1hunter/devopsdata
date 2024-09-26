@@ -4,7 +4,7 @@
   tasks:
     - name: Create file in Debian node
       file: 
-        path: /home/nikhil/testfile.txt
+        path: /home/nikhil/testfile1.txt
         state: touch
       when: ansible_os_family == "Debian"
 
