@@ -4,12 +4,12 @@
   tasks:
     - name: Create file in Debian node
       file: 
-        path: /home/nikhil/testfile1.txt
-        state: touch
-      when: ansible_os_family == "Debian"
-
-    - name: Create file in RedHat node
-      file: 
         path: /home/nikhil/testfile.txt
         state: touch
-      when: ansible_os_family == "RedHat"
+      #when: ansible_os_family == "Debian"
+
+   # - name: Create file in RedHat node
+    #  file: 
+     #   path: /home/nikhil/testfile.txt
+      #  state: touch
+      #when: ansible_os_family == "RedHat"
