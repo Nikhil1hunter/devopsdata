@@ -1,8 +1,9 @@
 ---
-    - name: Create file in Debian node
-      file: 
-        path: /home/nikhil/testfile.txt
-        state: touch
+- name: Create file in Debian node
+  file: 
+    path: /home/nikhil/testfile.txt
+    state: touch
+
       #when: ansible_os_family == "Debian"
 
    # - name: Create file in RedHat node
