@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-    - include_tasks: creafilebook.yml
+    - include_tasks: - /home/nikhil/devopsdata/creafilebook.yml
 
     - name: install apache2 on node server
       apt:
