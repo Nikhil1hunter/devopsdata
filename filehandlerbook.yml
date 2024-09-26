@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-    - include_tasks: - /home/nikhil/devopsdata/createfilebook.yml
+    - include_tasks: - createfilebook.yml
 
     - name: install apache2 on node server
       apt:
