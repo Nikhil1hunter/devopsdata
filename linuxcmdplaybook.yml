@@ -1,5 +1,5 @@
 ---
-- hosts: javaserver
+- hosts: webservers
   become: yes
   tasks:
     - name: Run linux command to get fully qualified hostname
