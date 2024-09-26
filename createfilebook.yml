@@ -1,7 +1,5 @@
 ---
-- hosts: webservers
-  become: yes
-  tasks:
+
     - name: Create file in Debian node
       file: 
         path: /home/nikhil/testfile.txt
