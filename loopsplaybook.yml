@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webservers
   become: yes
   vars:
     myvar1: git
@@ -8,4 +8,13 @@
   tasks:
     - name: Display variable
       debug:
-        msg: "{{ myvar1 }}"
+        msg: "{{ myvar3 }}"
+
+    - name: Install packages
+      apt:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - "{{ myvar1 }}"
+        - "{{ myvar2 }}"
+        - "{{ myvar3 }}"
