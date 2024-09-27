@@ -1,6 +1,4 @@
 ---
-- hosts: all
-  become: yes
   vars:
     ubuntujavapckg: "openjdk-8-jdk"
     redhatjavapckg: "java-1.8.0-openjdk-devel"
