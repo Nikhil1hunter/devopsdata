@@ -8,6 +8,7 @@
       apt:
           name: apache2
           state: present
+          notify: restart
 
     - name: i want to replace apache default page
       template:

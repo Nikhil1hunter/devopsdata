@@ -1,9 +1,4 @@
 ---
-  vars:
-    ubuntujavapckg: "openjdk-8-jdk"
-    redhatjavapckg: "java-1.8.0-openjdk-devel"
-
-  tasks:
     - name: Install OpenJDK 8 on Ubuntu
       apt:
         name: "{{ ubuntujavapckg }}"
